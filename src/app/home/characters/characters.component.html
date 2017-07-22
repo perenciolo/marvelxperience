@@ -1,0 +1,16 @@
+<!--************** Cards ******************-->
+<div class="container" fxLayoutWrap fxLayoutGap="1vw" fxLayoutAlign="center" fxLayout="column" fxLayout.gt-md="row">
+  <md-card class="char-card" *ngFor="let data of myData" fxLayout="column" fxFlexAlign="start" fxFlex="1 1 auto" fxFlex.gt-md="1 1 calc(20% + 1vw)">
+    <img md-card-image src="{{data.thumbnail.path+'.'+ data.thumbnail.extension}}">
+    <md-card-title>{{data.name}}</md-card-title>
+    <md-card-content>
+      <p>{{data.description}}</p>
+    </md-card-content>
+    <md-card-actions align="end">
+      <button md-button [routerLink]="['/character', data.id]"><md-icon>local_library</md-icon> SHOW COMICS</button>
+      <a md-button href="http://www.facebook.com/Marvel" target="_blank">
+        <md-icon>share</md-icon> SHARE
+      </a>
+    </md-card-actions>
+  </md-card>
+</div>

@@ -1,0 +1,50 @@
+<div class="container" fxLayoutWrap>
+  <!--<md-card *ngFor="let data of myData" fxLayout="row" fxFlexAlign="center" fxFlex="1 1 calc(10rem + 10px)">
+    <md-card-content>
+      <div fxLayout="column">
+        {{data.title}}
+        <img fxFlexFill [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/portrait_uncanny.' + data.thumbnail.extension}}">
+      </div>
+    </md-card-content>
+  </md-card>-->
+
+  <!--<md-list dense>
+    <md-list-item *ngFor="let data of myData">
+      <h3 md-subheader>{{data.title}}</h3>
+      <img md-list-avatar [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/portrait_medium.' + data.thumbnail.extension}}">
+      <h4 md-line>Creators:
+        <div *ngFor="let creator of data.creators.items">
+          <a href="{{creator.resourceURI}}" target="_blank">
+            {{creator.name}}
+          </a> ({{creator.role}})
+        </div>
+      </h4>
+      <p md-line> {{data.title}} </p>
+      <p md-line class="demo-secondary-text">{{data.description}} </p>
+    </md-list-item>
+  </md-list>-->
+
+  <div fxLayout='column' *ngFor="let data of myData">
+    <h3>{{data.title}}</h3>
+    <div fxLayout.sm='row' fxLayoutGap="10px">
+      <div fxFlex="1 1 calc(50% + 10px)" fxFlex.xs="100">
+        <img md-list-avatar [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/portrait_medium.' + data.thumbnail.extension}}">
+      </div>
+      <div fxFlex="1 1 calc(50% + 10px)" fxFlex.xs="100">
+        <small fxFlex="100" *ngIf="data.description" [innerHtml]="data.description">
+          <!--.slice(0,100)+ '<br><small>more ...</small>'-->
+        </small>
+      </div>
+    </div>
+    <div fxLayout='row'>
+      <small>
+        Characters:
+        <div fxLayout='column' fxLayoutAlign="start">
+          <a md-button *ngFor="let character of data.characters.items" routerLink="." fxFlexAlign="start"> 
+            <md-icon md-list-icon>launch</md-icon> {{character.name}}
+          </a>
+        </div>
+      </small>
+    </div>
+  </div>
+</div>

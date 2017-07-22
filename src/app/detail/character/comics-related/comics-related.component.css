@@ -1,0 +1,13 @@
+md-card-actions[_ngcontent-c9].mat-card-actions{
+    margin: 0;
+}
+
+.container{
+    margin: auto;
+}
+
+md-card{
+    margin: 2vh 0 auto;
+    padding:0;
+    overflow: hidden;
+}

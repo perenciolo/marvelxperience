@@ -1,0 +1,19 @@
+<div class="container" fxLayoutWrap fxLayoutGap="1vw" fxLayoutAlign="space-around" fxLayout="column" fxLayout.gt-md="row">
+  <md-progress-bar *ngIf="showProgress" mode="indeterminate"></md-progress-bar>
+  <md-card *ngFor="let data of myData" fxFlex.gt-sm="1 1 auto">
+    <md-card-title-group>
+      <md-card-title>{{data.name}}</md-card-title>
+      <md-card-subtitle>
+        <div *ngIf="data.description">
+          <h4>Description</h4>
+          <p>{{data.description}}</p>
+        </div>
+        <div>
+          <h4>Related comics</h4>
+          <p>Discover below in which comic books the <strong>{{data.name}}</strong> appears</p>
+        </div>
+      </md-card-subtitle>
+      <img md-card-md-image src="{{data.thumbnail.path + '.' + data.thumbnail.extension}}">
+    </md-card-title-group>
+  </md-card>
+</div>

@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body{
+    background: lightgray;
+    font-family: roboto, Arial, Helvetica, sans-serif;
+}
+.container{
+    max-width: 100%;
+}
+
+.marvel-xp .mat-toolbar.mat-primary {
+    background: #eb2224;
+    color: rgba(255,255,255,.87);
+}
+
+.marvel-xp .mat-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*.marvel-xp  .mat-button-wrapper{
+    color: #8e0000;
+}*/
+
+.marvel-xp .char-card{
+    margin: 2vh auto;
+}
+
+.marvel-xp .nav-icon{
+    color: #fafafa;
+}
+
+.marvel-xp .mx-hero-card{
+
+    background: url("/assets/textura.jpg");
+    background-blend-mode: color-burn;
+    background-color: #141d26;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+button, button.mat-button , a.mat-button{
+    margin: 0;
+    min-width: 1vw;
+    padding: 0 1vh;
+}

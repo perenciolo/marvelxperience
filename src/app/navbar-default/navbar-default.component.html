@@ -1,0 +1,11 @@
+<md-toolbar color="primary">
+  <span>Marvel Experience</span>
+  <span class="nav-spacer"></span>
+  <button md-button [mdMenuTriggerFor]="appMenu"><md-icon class="nav-icon">more_vert</md-icon></button>
+</md-toolbar>
+<md-menu #appMenu="mdMenu">
+  <button md-menu-item routerLink="">
+    <md-icon>home</md-icon>
+    <span>Home</span>
+  </button>
+</md-menu>
