@@ -14,7 +14,7 @@ export class CharactersService {
   constructor(private http: Http) { }
 
   getLimit() {
-    if (+this.ts.slice(this.ts.length - 4, this.ts.length - 2)) {
+    if (+this.ts.slice(this.ts.length - 4, this.ts.length - 2) > 0) {
       return +this.ts.slice(this.ts.length - 4, this.ts.length - 2);
     } else {
       return 100;
