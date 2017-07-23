@@ -11,17 +11,25 @@ import { Observable } from 'rxjs/Observable';
 export class CharactersComponent implements OnInit {
 
   myData: Observable<any>;
+  show = true;
 
   constructor(private charactersService: CharactersService) { }
 
   ngOnInit() {
+    this.getDataFromAPI();
+  }
+
+  getDataFromAPI() {
     this
       .charactersService
       .getFromMarvel()
       .subscribe(res => {
         this.myData = res.data.results;
-        console.log(res.data);
+        this.showProgress();
       });
   }
 
+  showProgress() {
+    this.show = !this.show;
+  }
 }

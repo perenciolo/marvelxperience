@@ -1,15 +1,25 @@
-#logo-marvel{
-    margin-top: 14px;
-}
-
-.mx-hero-card p{
+h2{
     font-family: Coda, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
     padding: 0;
     text-align: center;
-    font-size: 1rem;
     color: #fafafa;
 }
-
-md-card{
+img.mat-card-image:first-child{
     margin-top: 0;
+}
+.container{
+        margin-top: 0;
+        background: url("/assets/textura.jpg");
+        background-blend-mode: color-burn;
+        background-color: #141d26;
+        .pantone{
+            md-card{
+                background-color: transparent;
+                background: linear-gradient(to right, rgba(#b71c1c, .75) 0%, rgba(#141d26,.75) 90%);
+            }
+            background: url("/assets/mx-bg-hero-pb.png");
+            background-blend-mode: color-burn;
+        }   
 }

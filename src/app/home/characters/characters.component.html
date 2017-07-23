@@ -1,6 +1,7 @@
 <!--************** Cards ******************-->
-<div class="container" fxLayoutWrap fxLayoutGap="1vw" fxLayoutAlign="center" fxLayout="column" fxLayout.gt-md="row">
-  <md-card class="char-card" *ngFor="let data of myData" fxLayout="column" fxFlexAlign="start" fxFlex="1 1 auto" fxFlex.gt-md="1 1 calc(20% + 1vw)">
+<div fxLayoutWrap fxLayoutAlign="center space-between" fxLayout="column" fxLayout.gt-md="row" fxLayoutGap="1vw">
+  <md-progress-bar *ngIf="show" mode="indeterminate"></md-progress-bar>
+  <md-card class="char-card" *ngFor="let data of myData" fxLayout="column" fxFlexAlign="start" fxFlex="grow" fxFlex.gt-md="1 1 calc(20vw + 1vw)">
     <img md-card-image src="{{data.thumbnail.path+'.'+ data.thumbnail.extension}}">
     <md-card-title>{{data.name}}</md-card-title>
     <md-card-content>

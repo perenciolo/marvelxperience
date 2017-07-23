@@ -33,10 +33,6 @@ md-card{
     margin-top: 2vh;
 }
 
-.container{
-    max-width: 100%;
-}
-
 .marvel-xp {
     .mat-toolbar.mat-primary {
         background: map-get($mat-red, 900);
@@ -49,15 +45,6 @@ md-card{
 
     .char-card{
         margin: 2vh auto;
-    }
-
-    .mx-hero-card{
-        background: url("/assets/textura.jpg");
-        background-blend-mode: color-burn;
-        background-color: #141d26;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
     }
 }
 
