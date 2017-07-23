@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'mx-navbar-default',
   templateUrl: './navbar-default.component.html',
-  styleUrls: ['./navbar-default.component.css']
+  styleUrls: ['./navbar-default.component.scss']
 })
 export class NavbarDefaultComponent implements OnInit {
 

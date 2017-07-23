@@ -1,50 +1,42 @@
-<div class="container" fxLayoutWrap>
-  <!--<md-card *ngFor="let data of myData" fxLayout="row" fxFlexAlign="center" fxFlex="1 1 calc(10rem + 10px)">
-    <md-card-content>
-      <div fxLayout="column">
-        {{data.title}}
-        <img fxFlexFill [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/portrait_uncanny.' + data.thumbnail.extension}}">
-      </div>
-    </md-card-content>
-  </md-card>-->
+<div class="container">
+  <md-progress-bar *ngIf="show" mode="indeterminate"></md-progress-bar>
+  <md-card fxLayout="row wrap" fxLayoutAlign="space-between start" fxLayoutAlign.lt-sm="start space-between" fx class="mx-dialog">
+    <div fxLayoutAlign="center start" fxFlex="grow" fxFlex.gt-md="33.33%">
+      <div *ngFor="let data of myData">
+        <md-card-subtitle>{{data.dates[0].date | date:'fullDate' }}</md-card-subtitle>
+        <md-card-title>{{data.title}}</md-card-title>
+        <md-card-content>
+          <p *ngFor="let p of data.prices">
+            <span *ngIf="p.price != 0">
+        <small>price: USD$</small> {{p.price}}
+        </span>
+          </p>
+          <img fxHide.gt-xs md-card-image [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/landscape_incredible.' + data.thumbnail.extension}}">
+          <p [innerHtml]="data.description"></p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button><md-icon>favorite</md-icon></button>
+          <button md-button><md-icon>share</md-icon></button>
+        </md-card-actions>
+        <md-card-footer>
 
-  <!--<md-list dense>
-    <md-list-item *ngFor="let data of myData">
-      <h3 md-subheader>{{data.title}}</h3>
-      <img md-list-avatar [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/portrait_medium.' + data.thumbnail.extension}}">
-      <h4 md-line>Creators:
-        <div *ngFor="let creator of data.creators.items">
-          <a href="{{creator.resourceURI}}" target="_blank">
-            {{creator.name}}
-          </a> ({{creator.role}})
-        </div>
-      </h4>
-      <p md-line> {{data.title}} </p>
-      <p md-line class="demo-secondary-text">{{data.description}} </p>
-    </md-list-item>
-  </md-list>-->
-
-  <div fxLayout='column' *ngFor="let data of myData">
-    <h3>{{data.title}}</h3>
-    <div fxLayout.sm='row' fxLayoutGap="10px">
-      <div fxFlex="1 1 calc(50% + 10px)" fxFlex.xs="100">
-        <img md-list-avatar [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/portrait_medium.' + data.thumbnail.extension}}">
-      </div>
-      <div fxFlex="1 1 calc(50% + 10px)" fxFlex.xs="100">
-        <small fxFlex="100" *ngIf="data.description" [innerHtml]="data.description">
-          <!--.slice(0,100)+ '<br><small>more ...</small>'-->
-        </small>
+        </md-card-footer>
       </div>
     </div>
-    <div fxLayout='row'>
-      <small>
-        Characters:
-        <div fxLayout='column' fxLayoutAlign="start">
-          <a md-button *ngFor="let character of data.characters.items" routerLink="." fxFlexAlign="start"> 
-            <md-icon md-list-icon>launch</md-icon> {{character.name}}
+      <div>
+      <div *ngFor="let data of myData">
+        <h2>Character list</h2>
+        <md-nav-list fxLayout="column">
+          <a fxFlex="grow" fxFlexAlign="start" md-list-item md-button *ngFor="let link of data.characters.items" (click)="getCharFromAPI(link.resourceURI)">
+            <md-icon md-list-icon>pageview</md-icon> {{ link.name }}
           </a>
-        </div>
-      </small>
+        </md-nav-list>
+      </div>
     </div>
-  </div>
+      <div fxHide.xs fxShow.gt-xs>
+      <div *ngFor="let data of myData">
+        <img [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/portrait_fantastic.' + data.thumbnail.extension}}">
+      </div>
+    </div>
+  </md-card>
 </div>

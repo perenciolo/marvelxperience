@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'mx-comics-related',
   templateUrl: './comics-related.component.html',
-  styleUrls: ['./comics-related.component.css']
+  styleUrls: ['./comics-related.component.scss']
 })
 export class ComicsRelatedComponent implements OnInit {
 

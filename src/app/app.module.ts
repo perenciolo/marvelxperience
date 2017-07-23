@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule, DatePipe } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import {
@@ -51,6 +52,7 @@ import { DialogComicsComponent } from './detail/character/comics-related/dialog-
     MdIconModule,
     FlexLayoutModule,
     MdProgressBarModule,
+    CommonModule,
     routing,
   ],
   providers: [CharactersService],

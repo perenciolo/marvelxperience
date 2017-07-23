@@ -1,9 +1,9 @@
 <md-progress-bar *ngIf="show" mode="indeterminate"></md-progress-bar>
 <div class="container" fxLayoutWrap fxLayoutGap="1vw">
-  <md-card *ngFor="let data of myData" fxLayout="row" fxFlexAlign="center" fxFlex="1 1 calc(10rem + 10px)">
+  <md-card *ngFor="let data of myData" fxLayout="row" fxFlexAlign="start" fxFlex="1 1 calc(10rem + 10px)">
     <md-card-content>
       <div fxLayout="column">
-        <img fxFlexFill [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '.' + data.thumbnail.extension}}">
+        <img md-card-image [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '.' + data.thumbnail.extension}}">
         <md-card-actions fxLayout="row" fxLayoutAlign="space-around" fxFlex="1 1 auto">
           <button md-button><md-icon>favorite</md-icon></button>
           <button md-button [routerLink]="['/comics', data.id]"><md-icon>find_in_page</md-icon></button>
