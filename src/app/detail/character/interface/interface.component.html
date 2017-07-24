@@ -17,7 +17,7 @@
   </md-card>
 
   <!--Only XS-->
-  <md-card fxHide.gt-xs class="char-card" *ngFor="let data of myData" fxLayout="column" fxFlex="grow" fxFlex.gt-md="1 1 calc(20vw + 1vw)">
+  <md-card fxHide.gt-xs class="char-card" *ngFor="let data of myData" fxFlex="grow" fxFlex.gt-md="1 1 calc(20vw + 1vw)">
     <img md-card-image src="{{data.thumbnail.path+'/landscape_incredible.'+ data.thumbnail.extension}}">
     <md-card-title>{{data.name}}</md-card-title>
     <md-card-content *ngIf="data.description">

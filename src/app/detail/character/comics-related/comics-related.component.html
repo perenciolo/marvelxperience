@@ -1,5 +1,5 @@
 <md-progress-bar *ngIf="show" mode="indeterminate"></md-progress-bar>
-<div fxLayoutWrap fxLayoutAlign="start space-between" fxLayoutAlign.gt-sm="space-between start" fxLayoutGap="1vw" fxLayout="column" fxLayout.gt-sm="row">
+<div fxLayoutWrap fxLayoutAlign="space-between start" fxLayoutGap="1vw" fxLayout.gt-sm="row">
   <md-card *ngFor="let data of myData" fxFlex="nogrow">
     <md-card-content>
       <img md-card-image [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/portrait_fantastic.' + data.thumbnail.extension}}">
@@ -13,9 +13,3 @@
     </md-card-content>
 
   </md-card>
-
-  <!--fxLayoutWrap fxLayoutGap="1vw" fxLayout="column" fxLayout.gt-sm="row"-->
-
-  <!--fxLayout="row" fxLayoutAlign="space-around" fxFlex="1 1 auto"-->
-
-  <!--fxFlexAlign="start"  fxFlex.gt-md="grow" fxFlex.gt-md="1 1 calc(12vw + 1vw)"-->

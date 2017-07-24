@@ -2,7 +2,7 @@
 <md-input-container>
   <span mdPrefix><md-icon>search</md-icon></span><input [(ngModel)]="finder" mdInput placeholder="Search">
 </md-input-container>
-<div fxLayoutWrap fxLayoutAlign="center space-between" fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap="1vw">
+<div fxLayoutWrap fxLayoutAlign.gt-xs="center space-between" fxLayout.gt-xs="row" fxLayoutGap="1vw">
   <md-card class="char-card" *ngFor="let data of filterByTitle()" fxFlex="grow" fxFlex.gt-xs="1 1 calc(40% + 1vw)" fxFlex.gt-md="1 1 calc(20% + 1vw)">
     <div fxLayout="column">
       <img md-card-image src="{{data.thumbnail.path+'/landscape_incredible.'+ data.thumbnail.extension}}">
