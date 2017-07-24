@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
 
+## Configuration
+
+Go to src/enviroments and add your keys to marvel api
+`export const publicKey = ADD YOUR MARVEL PUBLIC KEY HERE;
+export const privateKey = ADD YOUR MARVEL PRIVATE KEY HERE;`
+
+make a dir in node_modules/md5 and add this file named md5.ts 
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
