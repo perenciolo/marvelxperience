@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule, DatePipe } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
@@ -9,7 +10,8 @@ import {
   MdMenuModule,
   MdToolbarModule,
   MdIconModule,
-  MdProgressBarModule
+  MdProgressBarModule,
+  MdInputModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -45,11 +47,13 @@ import { DialogComicsComponent } from './detail/character/comics-related/dialog-
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
+    FormsModule,
     MdButtonModule,
     MdCardModule,
     MdMenuModule,
     MdToolbarModule,
     MdIconModule,
+    MdInputModule,
     FlexLayoutModule,
     MdProgressBarModule,
     CommonModule,

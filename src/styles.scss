@@ -9,7 +9,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$candy-app-primary: mat-palette($mat-deep-orange);
+$candy-app-primary: mat-palette($mat-red);
 $candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -23,10 +23,12 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 // that you are using.
 @include angular-material-theme($candy-app-theme);
 
+$mat-font-family: Roboto, 'Helvetica Neue', sans-serif;
 
 
 body{
     background: $black-87-opacity;
+    font-family: $mat-font-family;
 }
 
 md-card{
@@ -52,4 +54,9 @@ button, button.mat-button , a.mat-button{
     margin: 0;
     min-width: 1vw;
     padding: 0 1vh;
+}
+
+.mat-input-placeholder{
+    color: #999;
+    font-weight: 100;
 }

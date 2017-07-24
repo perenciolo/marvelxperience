@@ -1,6 +1,6 @@
-<div class="container" fxLayoutWrap fxLayoutGap="1vw" fxLayoutAlign="space-around" fxLayout="column" fxLayout.gt-md="row">
+<div fxLayoutWrap fxLayoutGap="1vw" fxLayoutAlign="space-between" fxLayout="column" fxLayout.gt-md="row">
   <md-progress-bar *ngIf="showProgress" mode="indeterminate"></md-progress-bar>
-  <md-card *ngFor="let data of myData" fxFlex.gt-sm="1 1 auto">
+  <md-card fxHide.xs *ngFor="let data of myData" fxFlex.gt-sm="1 1 auto">
     <md-card-title-group>
       <md-card-title>{{data.name}}</md-card-title>
       <md-card-subtitle>
@@ -16,4 +16,19 @@
       <img md-card-md-image src="{{data.thumbnail.path + '.' + data.thumbnail.extension}}">
     </md-card-title-group>
   </md-card>
+
+  <!--Only XS-->
+  <md-card fxHide.gt-xs class="char-card" *ngFor="let data of myData" fxLayout="column" fxFlex="grow" fxFlex.gt-md="1 1 calc(20vw + 1vw)">
+    <img md-card-image src="{{data.thumbnail.path+'/landscape_incredible.'+ data.thumbnail.extension}}">
+    <md-card-title>{{data.name}}</md-card-title>
+    <md-card-content *ngIf="data.description">
+      <h4>Description</h4>
+      <p *ngIf="data.description">{{data.description}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <h4>Related comics</h4>
+      <p>Discover below in which comic books the <strong>{{data.name}}</strong> appears</p>
+    </md-card-actions>
+  </md-card>
+
 </div>

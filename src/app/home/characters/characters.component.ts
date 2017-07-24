@@ -12,6 +12,7 @@ export class CharactersComponent implements OnInit {
 
   myData: Observable<any>;
   show = true;
+  finder: string;
 
   constructor(private charactersService: CharactersService) { }
 
@@ -27,6 +28,13 @@ export class CharactersComponent implements OnInit {
         this.myData = res.data.results;
         this.showProgress();
       });
+  }
+
+  filterByTitle() {
+    if (!this.myData || this.finder === undefined || this.finder.trim() === '') {
+      return this.myData;
+    }
+    return this.myData.filter(d => d.name.toLowerCase().includes(this.finder.toLowerCase()));
   }
 
   showProgress() {

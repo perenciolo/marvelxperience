@@ -1,17 +1,21 @@
-<!--************** Cards ******************-->
-<div fxLayoutWrap fxLayoutAlign="center space-between" fxLayout="column" fxLayout.gt-md="row" fxLayoutGap="1vw">
-  <md-progress-bar *ngIf="show" mode="indeterminate"></md-progress-bar>
-  <md-card class="char-card" *ngFor="let data of myData" fxLayout="column" fxFlexAlign="start" fxFlex="grow" fxFlex.gt-md="1 1 calc(20vw + 1vw)">
-    <img md-card-image src="{{data.thumbnail.path+'.'+ data.thumbnail.extension}}">
-    <md-card-title>{{data.name}}</md-card-title>
-    <md-card-content>
-      <p>{{data.description}}</p>
-    </md-card-content>
-    <md-card-actions align="end">
-      <button md-button [routerLink]="['/character', data.id]"><md-icon>local_library</md-icon> SHOW COMICS</button>
-      <a md-button href="http://www.facebook.com/Marvel" target="_blank">
-        <md-icon>share</md-icon> SHARE
-      </a>
-    </md-card-actions>
+<md-progress-bar *ngIf="show" mode="indeterminate"></md-progress-bar>
+<md-input-container>
+  <span mdPrefix><md-icon>search</md-icon></span><input [(ngModel)]="finder" mdInput placeholder="Search">
+</md-input-container>
+<div fxLayoutWrap fxLayoutAlign="center space-between" fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap="1vw">
+  <md-card class="char-card" *ngFor="let data of filterByTitle()" fxFlex="grow" fxFlex.gt-xs="1 1 calc(40% + 1vw)" fxFlex.gt-md="1 1 calc(20% + 1vw)">
+    <div fxLayout="column">
+      <img md-card-image src="{{data.thumbnail.path+'/landscape_incredible.'+ data.thumbnail.extension}}">
+      <md-card-title>{{data.name}}</md-card-title>
+      <md-card-content>
+        <p>{{data.description}}</p>
+      </md-card-content>
+      <md-card-actions align="end">
+        <button md-button [routerLink]="['/character', data.id]"><md-icon>local_library</md-icon> SHOW COMICS</button>
+        <a md-button href="http://www.facebook.com/Marvel" target="_blank">
+          <md-icon>share</md-icon> SHARE
+        </a>
+      </md-card-actions>
+    </div>
   </md-card>
 </div>
