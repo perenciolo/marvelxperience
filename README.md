@@ -1,6 +1,9 @@
 # Marvelxperience
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1. Angular Material version 2.0.0-beta.8. Angular Flex-Layout version 2.0.0-beta.8.
+
+## Disclaimer
+This is a fully responsive web app but, the module Angular Flex-Layout has some issues with safari integration because this browser miss some functionalities of flexbox when an element has fxLayout="column" on mobile devices as you can see [here](https://github.com/angular/flex-layout/issues/201) therefore for debugging this application in from extra smaller devices I recommend google chrome. As soon as the fix came out I will add it to the project.
 
 ## Configuration
 
@@ -8,7 +11,7 @@ Go to src/enviroments and add your keys to marvel api
 `export const publicKey = ADD YOUR MARVEL PUBLIC KEY HERE;
 export const privateKey = ADD YOUR MARVEL PRIVATE KEY HERE;`
 
-make a dir in node_modules/md5 and add this file named md5.ts 
+make a dir in node_modules/md5 and add [this file named md5.ts](https://github.com/perenciolo/marvelxperience/blob/master/md5.ts)  
 
 
 ## Development server
