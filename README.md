@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1. Angular Material version 2.0.0-beta.8. Angular Flex-Layout version 2.0.0-beta.8.
 
+A functional version has been deployed [here](https://perenciolo.github.io/marvelxperience/).
+
 ## Configuration
 
 Go to src/enviroments and add your keys to marvel api
