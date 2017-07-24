@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1. Angular Material version 2.0.0-beta.8. Angular Flex-Layout version 2.0.0-beta.8.
 
 ## Disclaimer
-This is a fully responsive web app but, the module Angular Flex-Layout has some issues with safari integration because this browser miss some functionalities of flexbox when an element has fxLayout="column" on mobile devices as you can see here therefore for debugging this application in from extra smaller devices I recommend google chrome. As soon as the fix came out I will add it to the project.
+This is a fully responsive web app but, the module Angular Flex-Layout has some issues with safari integration because this browser miss some functionalities of flexbox when an element has fxLayout="column" on mobile devices as you can see [here](https://github.com/angular/flex-layout/issues/201) therefore for debugging this application in from extra smaller devices I recommend google chrome. As soon as the fix came out I will add it to the project.
 
 ## Configuration
 
