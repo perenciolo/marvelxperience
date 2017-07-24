@@ -1,6 +1,6 @@
 <md-progress-bar *ngIf="show" mode="indeterminate"></md-progress-bar>
 <div fxLayoutWrap fxLayoutAlign="space-between start" fxLayoutGap="1vw" fxLayout.gt-sm="row">
-  <md-card *ngFor="let data of myData" fxFlex="nogrow">
+  <md-card *ngFor="let data of myData" fxFlex.xs="grow" fxFlex="nogrow">
     <md-card-content>
       <img md-card-image [alt]="data.thumbnail.path" src="{{data.thumbnail.path + '/portrait_fantastic.' + data.thumbnail.extension}}">
       <md-card-actions fxLayoutAlign="space-around">
