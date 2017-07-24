@@ -1,5 +1,4 @@
 <div fxLayoutWrap fxLayoutGap="1vw" fxLayoutAlign="space-between" fxLayout="column" fxLayout.gt-md="row">
-  <md-progress-bar *ngIf="showProgress" mode="indeterminate"></md-progress-bar>
   <md-card fxHide.xs *ngFor="let data of myData" fxFlex.gt-sm="1 1 auto">
     <md-card-title-group>
       <md-card-title>{{data.name}}</md-card-title>
